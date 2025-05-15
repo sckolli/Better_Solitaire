@@ -17,10 +17,10 @@ buttons = {
   undo  = { x=720, y=10, w=70, h=30, label="Undo"  }
 }
 
--- history of all past states
+
 history = {}
 
--- ─── Generic serialization helpers ────────────────────────────────────────────
+
 local function serializePile(p)
   local out = { x=p.x, y=p.y, type=p.type, index=p.index, cards={} }
   for i, c in ipairs(p.cards) do
