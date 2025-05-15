@@ -109,7 +109,7 @@ function PileClass:updateCardPositions()
 end
 
 function PileClass:isPointInside(x, y)
-  -- For tableau piles, create a taller hitbox
+  
   local height = CARD_HEIGHT
   if self.type == "tableau" then
     height = math.max(CARD_HEIGHT, CARD_OVERLAP * #self.cards)
@@ -130,7 +130,7 @@ function PileClass:checkForMouseOver(grabber)
   
   self.isHovered = self:isPointInside(mouseX, mouseY)
   
-  -- Check individual cards in the pile
+  
   for _, card in ipairs(self.cards) do
     card:checkForMouseOver(grabber)
   end
